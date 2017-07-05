@@ -8,7 +8,7 @@ var colors = require("colors"),
 var packageJSON = jsonfile.readFile(packageURL, function(err, package) {
 	var version = decodeVersion(package.version);
 
-	console.log("VPPLUS".blue, package.name);
+	console.log("VPPLUS".blue, ": app name -".green, package.name);
 
 	switch(action){
 		case "increase-build":
@@ -29,7 +29,7 @@ var packageJSON = jsonfile.readFile(packageURL, function(err, package) {
 	  		console.log(err);
 	  	}
 
-	  	console.log("VPPLUS".blue, ": new version:".green, package.version);
+	  	console.log("VPPLUS".blue, ": new version -".green, package.version);
 
 	});
 });
